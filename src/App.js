@@ -10,7 +10,8 @@ const theme = {
     headerBack: '#212121',
     body: '#ffffff',
     background: '#a8d7f0',
-  }
+  },
+  mobile: '768px',
 }
 function App() {
 
