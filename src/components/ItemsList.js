@@ -31,7 +31,7 @@ export default function ItemsList() {
             <p><span>Description:</span> {item.description} </p>
             <p><span>Star Count:</span> {item.stargazers_count} </p>
             <p><span>Fork Count:</span> {item.forks_count} </p>
-            <p><span>Date Created:</span> {item.created_at} </p>
+            <p><span>Date Created:</span> {(item.created_at.slice(0, 10))} </p>
             <NavLink to={`/items/${item.name}`}>
               <Button>Recent commit</Button>
             </NavLink>

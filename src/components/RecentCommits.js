@@ -38,7 +38,7 @@ export default function RecentCommits() {
               <h1>Commit Title: {name} </h1>
               <h3>Committer username: {commit.commit.committer.name}</h3>
               <p><span>Commit hash:</span> {commit.commit.message} </p>
-              <p><span>Date Created:</span> {commit.commit.committer.date} </p>
+              <p><span>Date Created:</span> {(commit.commit.committer.date.slice(0, 10))} </p>
               <br/>
             </div>
           </StyledItem>
