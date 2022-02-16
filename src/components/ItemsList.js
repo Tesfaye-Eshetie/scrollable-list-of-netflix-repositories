@@ -24,7 +24,7 @@ export default function ItemsList() {
   let myItems;
   return (
     myItems = [].concat(items)
-    .sort((a, b) => a.stargazers_count > b.stargazers_count ? 1 : -1)
+    .sort((a, b) => a.stargazers_count > b.stargazers_count ? -1 : 1)
       .map(item=>   
         <Card>
           <StyledItem key={item.id} >
