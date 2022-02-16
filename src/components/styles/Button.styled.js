@@ -7,8 +7,8 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 15px 60px;
-  margin: 20px auto;
+  padding: 15px 40px;
+  margin: 20px;
   background-color: ${({ bg }) => bg || '#fff'};
   color: ${({ color }) => color || '#333'};
   &:hover {

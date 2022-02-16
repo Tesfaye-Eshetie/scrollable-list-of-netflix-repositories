@@ -4,10 +4,9 @@ import { StyledItem } from './styles/Item.styled';
 import { Button } from './styles/Button.styled';
 import { Card } from './styles/Card.styled';
 import { useParams, NavLink } from 'react-router-dom';
-import InputCommit from './InputCommit';
 
 
-export default function RecentCommits({}) {
+export default function RecentCommits() {
     const [commits, setCommits] = useState([]);
 
     const {name} = useParams();
@@ -23,12 +22,9 @@ export default function RecentCommits({}) {
        
      }
      fetchData();
-   }, []);
+   }, [baseURL]);
 
-   const addCommits = values => {
-    const newCommits = [...commits, { values}];
-    setCommits(newCommits);
-  };
+ 
   return (
     <>
       <Card>
@@ -45,7 +41,6 @@ export default function RecentCommits({}) {
               <p><span>Date Created:</span> {commit.commit.committer.date} </p>
               <br/>
             </div>
-            <InputCommit addCommit={addCommits}/>
           </StyledItem>
           )}
         </Card>

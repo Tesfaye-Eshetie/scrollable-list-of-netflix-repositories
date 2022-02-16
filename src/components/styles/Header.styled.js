@@ -6,5 +6,6 @@ export const Header = styled.div`
     background: ${({ theme }) => theme.colors.headerBack};
     color: ${({ theme }) => theme.colors.headerColor};
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+
 `

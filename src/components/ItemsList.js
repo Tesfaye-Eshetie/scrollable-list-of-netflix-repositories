@@ -21,13 +21,11 @@ export default function ItemsList() {
     fetchData();
   }, []);
 
-  let myItems;
   return (
-    myItems = [].concat(items)
-    .sort((a, b) => a.stargazers_count > b.stargazers_count ? -1 : 1)
+    items.sort((a, b) => a.stargazers_count > b.stargazers_count ? -1 : 1)
       .map(item=>   
-        <Card>
-          <StyledItem key={item.id} >
+        <Card key={item.id}>
+          <StyledItem >
             <h2>Repo name: {item.name} </h2>
             <h5>Language: {item.language}</h5>
             <p><span>Description:</span> {item.description} </p>
