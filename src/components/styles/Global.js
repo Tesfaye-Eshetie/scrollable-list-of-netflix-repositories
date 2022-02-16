@@ -12,25 +12,25 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.15em;
     margin: 0;
   }
-  NavLink {
-
-  }
-  h2 {
-
-  }
-  h5{
-
+   h2 h5{
+    margin : 20px;
   }
   p {
-    opacity: 0.6;
+    opacity: 0.8;
     line-height: 1.5;
+    margin : 0;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 700;
   }
   input {
     opacity: 0.6;
+    margin-bottom: 15px;
     line-height: 1.5;
     border: none;
     border-radius: 5px;
-    width: 300px;
+    width: 400px;
   }
 `
 

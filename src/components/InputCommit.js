@@ -3,7 +3,6 @@ import React, {useState} from "react";
 export default function ({addCommit}) {
   
     const [values, setValue] = useState([
-        {commitTitle: ""},
         {committerName: ""},
         {commitMessage: ""},
         {date: Date.now()}
@@ -18,7 +17,7 @@ export default function ({addCommit}) {
   
     return (
       <form onSubmit={handleSubmit}>
-        <p>You can add commit here:</p>
+        <h5>You can add commit here:</h5>
         <input
           type="text"
           value={values.committerName}

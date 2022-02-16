@@ -7,4 +7,8 @@ export const Card = styled.div`
   margin: 0 auto;
   max-height: 100%; 
   overflow: auto;
+  &:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
 `

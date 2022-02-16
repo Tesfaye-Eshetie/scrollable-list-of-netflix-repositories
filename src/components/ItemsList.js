@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { StyledItem } from './styles/Item.styled';
 import { Card } from './styles/Card.styled';
+import { Button } from './styles/Button.styled';
 import { NavLink } from "react-router-dom";
 
 export default function ItemsList() {
@@ -27,13 +28,14 @@ export default function ItemsList() {
       .map(item=>   
         <Card>
           <StyledItem key={item.id} >
+            <h2>Repo name: {item.name} </h2>
+            <h5>Language: {item.language}</h5>
+            <p><span>Description:</span> {item.description} </p>
+            <p><span>Star Count:</span> {item.stargazers_count} </p>
+            <p><span>Fork Count:</span> {item.forks_count} </p>
+            <p><span>Date Created:</span> {item.created_at} </p>
             <NavLink to={`/items/${item.name}`}>
-              <h2>Repo name: {item.name} </h2>
-              <h5>Language: {item.language}</h5>
-              <p>Description: {item.description} </p>
-              <p>Star Count: {item.stargazers_count} </p>
-              <p>Fork Count: {item.forks_count} </p>
-              <p>Date Created: {item.created_at} </p>
+              <Button>Recent commit</Button>
             </NavLink>
           </StyledItem>
         </Card>
