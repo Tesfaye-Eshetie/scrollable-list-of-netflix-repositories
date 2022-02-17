@@ -7,7 +7,7 @@ export const StyledItem = styled.div`
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   margin: 20px 0;
-  padding: 40px;
+  padding: 20px;
   list-style-type:none;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.background};

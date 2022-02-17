@@ -11,9 +11,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.15em;
     margin: 0;
   }
-   h2 h5{
-    margin : 20px;
-  }
   p {
     opacity: 0.8;
     line-height: 1.5;

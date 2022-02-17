@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { Card } from '../styles/Card.styled';
+import { StyledItem } from "../styles/Item.styled";
 import CommitForm from "./CommitForm";
 
-export default function Form({title}) {
+export default function Form({title, committer, message, date}) {
   const [commits, setCommits] = useState(
     { 
         userName: "",
@@ -16,18 +16,27 @@ export default function Form({title}) {
   };
   let { userName, commit } = commits;
   return (
-    < Card >
-        {
-            userName && commit &&
-            <div>
-                <h1>Commit Title: {title} </h1>
-                <h3>Committer username: {userName}</h3>
-                <p><span>Commit hash:</span> {commit} </p>
-                <p><span>Date Created:</span> {new Date().toISOString().slice(0, 10)} </p>
-            </div>
-        }
+    <>
+      {
+          (userName && commit &&
+          <StyledItem>
+              <h1>Commit Title: {title} </h1>
+              <h3>Committer username: {userName}</h3>
+              <p><span>Commit hash:</span> {commit} </p>
+              <p><span>Date Created:</span> {new Date().toISOString().slice(0, 10)} </p>
+          </StyledItem>) ||
+          (<StyledItem>
+            <h1>Commit Title: {title} </h1>
+            <h3>Committer username: {committer}</h3>
+            <p><span>Commit hash:</span> {message} </p>
+            <p><span>Date Created:</span> {date} </p>
+            <br/>
+        </StyledItem>)
+      }
+      <StyledItem>
         <CommitForm addTodo={addTodos} />
-    </Card>
+      </StyledItem>
+    </>
   );
 }
 

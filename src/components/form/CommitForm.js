@@ -17,7 +17,8 @@ export default function CommitForm({ addTodo }) {
         e.preventDefault();
         if (!commit) return;
         addTodo({...commit});
-        setCommit("");
+        setCommit({ userName: "",
+        commit: ""  });
     };
 
     return (
