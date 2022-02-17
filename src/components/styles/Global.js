@@ -28,18 +28,22 @@ const GlobalStyles = createGlobalStyle`
   }
   input {
     margin: 10px 0;
-    min-width: 300px;
+    width: 300px;
     height: 28px;
     font-size: 16px;
     border-radius: 5px;
     border: none;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      width: 160px; 
   }
   textarea {
     margin: 10px 0;
-    min-width: 500px;
+    width: 500px;
     font-size: 16px;
     border-radius: 5px;
     border: none;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      width: 200px; 
   }
 `
 
