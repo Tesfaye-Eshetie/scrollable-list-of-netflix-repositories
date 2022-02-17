@@ -23,13 +23,20 @@ const GlobalStyles = createGlobalStyle`
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     margin-top: 0;
   }
   input {
-    margin: 10px auto;
-    min-width: 500px;
+    margin: 10px 0;
+    min-width: 300px;
     height: 28px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+  }
+  textarea {
+    margin: 10px 0;
+    min-width: 500px;
     font-size: 16px;
     border-radius: 5px;
     border: none;

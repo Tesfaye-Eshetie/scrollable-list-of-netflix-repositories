@@ -1,24 +1,24 @@
 import React, {useState} from "react";
 import { Button } from "../styles/Button.styled";
 
-export default function CommitForm({ addTodo }) {
-    const [commit, setCommit] = useState(
-        { 
-            userName: "",
-            commit: "" 
-        }      
-      );
-  
+const initialState = { userName: "", commit: "" } 
+export default function CommitForm({ addCommit }) {
+    const [ { userName, commit }, setCommit] = useState( initialState );
+
+    const clearState = () => {
+    setCommit({ ...initialState });
+    };
+        
     const handleInputChange = (e)=> {
-        setCommit({ ...commit, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setCommit(prevState => ({ ...prevState, [name]: value }));
       }
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (!commit) return;
-        addTodo({...commit});
-        setCommit({ userName: "",
-        commit: ""  });
+        if (!{ userName, commit }) return;
+        addCommit({...{ userName, commit }});
+        clearState();
     };
 
     return (
@@ -28,15 +28,20 @@ export default function CommitForm({ addTodo }) {
                 <input
                 type="text"
                 name= "userName"
+                value={userName}
                 placeholder= "Insert your name ..."
                 onChange={handleInputChange}
                 />
-                <input
+                <textarea  name= "commit"
+                value={commit}
+                placeholder= "Add your commit ..."
+                onChange={handleInputChange} rows="3" cols="50"></textarea>
+                {/* <input
                 type="textarea"
                 name= "commit"
                 placeholder= "Add your commit ..."
                 onChange={handleInputChange}
-                />
+                /> */}
                 <Button>Submit Commit</Button>
             </form>
         </>

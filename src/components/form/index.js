@@ -9,8 +9,8 @@ export default function Form({title, committer, message, date}) {
         commit: "" 
     }      
   );
-
-  const addTodos = ({userName, commit}) => {
+    
+  const addCommit = ({userName, commit}) => {
     const newCommits = {...commits, userName, commit};
     setCommits(newCommits);
   };
@@ -34,7 +34,7 @@ export default function Form({title, committer, message, date}) {
         </StyledItem>)
       }
       <StyledItem>
-        <CommitForm addTodo={addTodos} />
+        <CommitForm addCommit={addCommit} />
       </StyledItem>
     </>
   );
