@@ -6,8 +6,8 @@ import Routers from "./routers";
 
 const theme = {
   colors: {
-    headerColor:'#f2f2f2',
-    headerBack: '#212121',
+    headerColor:'#d1d1d1',
+    headerBack: '#333333',
     body: '#ffffff',
     background: '#a8d7f0',
   },

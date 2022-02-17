@@ -4,6 +4,7 @@ import { StyledItem } from './styles/Item.styled';
 import { Button } from './styles/Button.styled';
 import { Card } from './styles/Card.styled';
 import { useParams, NavLink } from 'react-router-dom';
+import Form from './form';
 
 
 export default function RecentCommits() {
@@ -26,25 +27,25 @@ export default function RecentCommits() {
 
  
   return (
-    <>
-      <Card>
-        <NavLink to={`/items`}>
-          <Button bg='#ff0099' color='#fff'>Back to List</Button>
-        </NavLink>
-        {commits.map((commit, index) => 
-        index === 0 && 
-          <StyledItem key={index}>
-            <div>
-              <h1>Commit Title: {name} </h1>
-              <h3>Committer username: {commit.commit.committer.name}</h3>
-              <p><span>Commit hash:</span> {commit.commit.message} </p>
-              <p><span>Date Created:</span> {(commit.commit.committer.date.slice(0, 10))} </p>
-              <br/>
-            </div>
-          </StyledItem>
-          )}
-        </Card>
-    </>
-      
+    <Card>
+      <NavLink to={`/items`}>
+        <Button bg='#ff0099' color='#fff'>Back to List</Button>
+      </NavLink>
+      {commits.map((commit, index) => 
+      index === 0 && 
+        <StyledItem key={index}>
+          <div>
+            <h1>Commit Title: {name} </h1>
+            <h3>Committer username: {commit.commit.committer.name}</h3>
+            <p><span>Commit hash:</span> {commit.commit.message} </p>
+            <p><span>Date Created:</span> {(commit.commit.committer.date.slice(0, 10))} </p>
+            <br/>
+          </div>
+        </StyledItem>
+        )}
+        <StyledItem>
+          <Form title={name}/>
+        </StyledItem>
+      </Card>
   )
 }

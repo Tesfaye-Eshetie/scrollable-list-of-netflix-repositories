@@ -5,6 +5,7 @@ export const Header = styled.div`
     height: 80px;
     background: ${({ theme }) => theme.colors.headerBack};
     color: ${({ theme }) => theme.colors.headerColor};
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: space-evenly;
     font-size: 18px;

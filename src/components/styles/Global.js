@@ -23,6 +23,20 @@ const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     font-weight: 700;
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  input {
+    margin: 10px auto;
+    min-width: 500px;
+    height: 28px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+  }
 `
 
 export default GlobalStyles;
