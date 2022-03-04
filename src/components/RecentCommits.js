@@ -13,13 +13,9 @@ export default function RecentCommits() {
 
     useEffect(() => {
      const fetchData = async()=> {
-
        const request = await axios.get(baseURL);
        setCommits(request.data);
-       console.log(request);
-       return request;
-       
-     }
+      }
      fetchData();
    }, [baseURL]);
 

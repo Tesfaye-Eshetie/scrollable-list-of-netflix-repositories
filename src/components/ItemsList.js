@@ -14,9 +14,6 @@ export default function ItemsList() {
     const fetchData = async()=> {
       const request = await axios.get(netflixRepositoriesURL);
       setItems(request.data);
-      console.log(request);
-      return request;
-      
     }
     fetchData();
   }, []);

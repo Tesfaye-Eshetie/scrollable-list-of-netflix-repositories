@@ -6,7 +6,7 @@ import { Header } from "./styles/Header.styled";
 export default function Layout({ children }) {
   return(
     <>
-    <Header>
+      <Header>
         <NavLink to={"/"}>
           <Button>Home</Button>
         </NavLink>
