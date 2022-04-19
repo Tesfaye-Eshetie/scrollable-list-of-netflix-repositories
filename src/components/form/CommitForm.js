@@ -42,7 +42,7 @@ export default function CommitForm({ addCommit }) {
                 placeholder= "Add your commit ..."
                 onChange={handleInputChange}
                 /> */}
-                <Button>Submit Commit</Button>
+                <Button bg="#333" color="#eee">Submit Commit</Button>
             </form>
         </>
     );

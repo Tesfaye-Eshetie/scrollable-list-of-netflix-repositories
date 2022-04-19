@@ -7,10 +7,10 @@ export default function Layout({ children }) {
   return(
     <>
       <Header>
+        <h1>Scrollable Lists of Netflixs Repositories </h1>
         <NavLink to={"/"}>
           <Button>Home</Button>
         </NavLink>
-        <h2>Scrollable Lists of Netflixs Repositories </h2>
       </Header>
       <div>{children}</div>
     </>

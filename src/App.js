@@ -9,7 +9,7 @@ const theme = {
     headerColor:'#d1d1d1',
     headerBack: '#333333',
     body: '#ffffff',
-    background: '#a8d7f0',
+    background: '#ededed',
   },
   mobile: '768px',
 }
